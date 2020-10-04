@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ *Positive integer to continue and negative integr to quit
+ * @author Tolga Nurtekin
  */
 public class Main {
 
@@ -9,7 +10,22 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
-    
+  //create Scanner
+  Scanner input = new Scanner(System.in);
+    //ask user for integer
+  System.out.println("Please enter a positive integer to continue or a negative integer to quit");
+   //declare a variable
+  int integer = input.nextInt();
+  do{ 
+  System.out.println("Please enter a positive integer to continue or a negative integer to quit");
+  integer = input.nextInt();
+   }while(integer > 0);
+   
+   if(integer < 0){
+   System.out.println("All Done");
+   }else if (integer == 0){
+    System.out.println("All Done");
+   } 
   }
-}
+
+  }
